@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sdr.guide.model.Book">
+		<field name="gusetbookId" type="int" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="deleteDate" type="Date" />
+	</model>
+	<model name="com.sdr.guide.model.BookFile">
+		<field name="gusetbookId" type="int" />
+		<field name="fileId" type="int" />
+		<field name="fileName" type="String" />
+		<field name="fileType" type="String" />
+		<field name="fileLocation" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="deleteDate" type="Date" />
+	</model>
+</model-hints>

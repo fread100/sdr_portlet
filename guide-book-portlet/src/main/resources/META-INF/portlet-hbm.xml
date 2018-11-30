@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sdr.guide.model.Book" />
+	<import class="com.sdr.guide.model.BookFile" />
+	<class name="com.sdr.guide.model.impl.BookImpl" table="test_Book">
+		<cache usage="read-write" />
+		<id name="gusetbookId" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="deleteDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sdr.guide.model.impl.BookFileImpl" table="test_BookFile">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.sdr.guide.service.persistence.BookFilePK">
+			<key-property name="gusetbookId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+			<key-property name="fileId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		</composite-id>
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileLocation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="deleteDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

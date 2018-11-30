@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sdr.guide.service.BookLocalService" class="com.sdr.guide.service.impl.BookLocalServiceImpl" />
+	<bean id="com.sdr.guide.service.BookService" class="com.sdr.guide.service.impl.BookServiceImpl" />
+	<bean id="com.sdr.guide.service.persistence.BookPersistence" class="com.sdr.guide.service.persistence.BookPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sdr.guide.service.BookFileLocalService" class="com.sdr.guide.service.impl.BookFileLocalServiceImpl" />
+	<bean id="com.sdr.guide.service.BookFileService" class="com.sdr.guide.service.impl.BookFileServiceImpl" />
+	<bean id="com.sdr.guide.service.persistence.BookFilePersistence" class="com.sdr.guide.service.persistence.BookFilePersistenceImpl" parent="basePersistence" />
+</beans>
